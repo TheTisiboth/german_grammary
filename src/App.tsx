@@ -1,4 +1,4 @@
-import {useRef, FC, Ref} from 'react';
+import {useRef, FC} from 'react';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import Part1 from "./documents/react/part1";
