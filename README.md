@@ -5,9 +5,8 @@
 This project creates a German grammary cheatsheet for the most important grammar rules in the German language. It is designed to be a quick reference guide for learners of German, providing clear and concise explanations of key grammar concepts.
 
 ## Results
-You can view or download the generated PDF here: [German Grammar Cheatsheet](public/combined_compressed.pdf)
-<iframe src="public/combined_compressed.pdf" width="100%" height="600px">
-</iframe>
+You can view the generated PDF here: [German Grammar Cheatsheet](public/combined_compressed.pdf)
+
 ## Setup
 
 ## Prerequisites
