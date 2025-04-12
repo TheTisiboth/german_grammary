@@ -1,6 +1,5 @@
-import {FC, Ref} from "react";
 
-const GermanCases: FC<{ ref?: Ref<HTMLDivElement> | null }> = ({ref}) => {
+const GermanCases = () => {
     const caseColors = {
         nominativ: {color: "#3498db", backgroundColor: "#ebf5fb"},
         akkusativ: {color: "#e74c3c", backgroundColor: "#fdedec"},
@@ -27,27 +26,17 @@ const GermanCases: FC<{ ref?: Ref<HTMLDivElement> | null }> = ({ref}) => {
     const renderHTML = (html) => ({__html: html});
 
     return (
-        <div ref={ref} style={{
+        <div style={{
             fontFamily: "Arial, sans-serif",
             maxWidth: "900px",
             margin: "0 auto",
-            padding: "20px",
             backgroundColor: "#ffffff"
         }}>
-            <h1 style={{
-                color: "#2c3e50",
-                borderBottom: "2px solid #3498db",
-                paddingBottom: "10px",
-                marginBottom: "30px"
-            }}>
-                German Cases: Complete Reference Guide - Part 1
-            </h1>
-
             {/* Basic Functions */}
             <div style={sectionStyle}>
                 <h2 style={{color: "#2c3e50"}}>1. Basic Case Functions</h2>
                 {Object.entries(caseColors).map(([caseName, style]) => (
-                    <div key={caseName} style={{...style, padding: "15px", margin: "10px 0", borderRadius: "5px"}}>
+                    <div key={caseName} style={{...style, padding: "5px", margin: "10px 0", borderRadius: "5px"}}>
                         <h3>{caseName.charAt(0).toUpperCase() + caseName.slice(1)} ({
                             caseName === "nominativ" ? "Wer? Was?" :
                                 caseName === "akkusativ" ? "Wen? Was?" :
