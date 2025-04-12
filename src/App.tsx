@@ -19,7 +19,7 @@ const App: FC = () => {
             if (!ref?.current) return;
 
             const canvas = await html2canvas(ref.current, { scale: 2.4 });
-            const imgData = canvas.toDataURL('image/png');
+            const imgData = canvas.toDataURL('image/jpeg', 0.6);
             const imgProps = pdf.getImageProperties(imgData);
             const imgWidth = pageWidth;
             const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
@@ -32,7 +32,7 @@ const App: FC = () => {
         await addPartToPdf(part2Ref, false);
         await addPartToPdf(part3Ref, false);
 
-        pdf.save('combined.pdf');
+        pdf.save('combined_compressed.pdf');
     };
 
     return (
