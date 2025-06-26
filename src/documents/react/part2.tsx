@@ -24,7 +24,7 @@ const Part2 = () => {
                 <div style={{display: "flex", flexDirection: "column", gap: "15px"}}>
                     <div style={{...caseColors.dativ, padding: "15px", borderRadius: "5px"}}>
                         <h4 style={{marginTop: 0}}>Dativ Prepositions</h4>
-                        <p><b>ab - außer - aus - bei - gegenüber - mit - nach - seit - von - zu</b></p>
+                        <p><b>aus - bei - mit - nach - seit - von - zu - gegenüber - ab - außer</b></p>
                         <p><i>Example: Das Kind spielt <b>mit dem</b> Ball.</i></p>
                     </div>
 

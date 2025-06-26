@@ -2,8 +2,8 @@ import { useRef, FC, RefObject } from 'react';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import Part1 from './documents/react/part1';
-import Part2 from './documents/react/part2.tsx';
-import Part3 from './documents/react/part3.tsx';
+import Part2 from './documents/react/part2';
+import Part3 from './documents/react/part3';
 
 const App: FC = () => {
     const part1Ref = useRef<HTMLDivElement>(null);
@@ -13,7 +13,6 @@ const App: FC = () => {
     const handleDownloadPdf = async () => {
         const pdf = new jsPDF('portrait', 'pt', 'a4');
         const pageWidth = pdf.internal.pageSize.getWidth();
-        const pageHeight = pdf.internal.pageSize.getHeight();
 
         const addPartToPdf = async (ref: RefObject<HTMLDivElement|null>, isFirstPage: boolean) => {
             if (!ref?.current) return;
@@ -37,6 +36,12 @@ const App: FC = () => {
 
     return (
         <div>
+             <button
+                onClick={handleDownloadPdf}
+                style={{ display: 'block', margin: '20px auto', padding: '10px 20px' }}
+            >
+                Download PDF
+            </button>
             <div ref={part1Ref}>
                 <Part1 />
             </div>
@@ -46,12 +51,6 @@ const App: FC = () => {
             <div ref={part3Ref}>
                 <Part3 />
             </div>
-            <button
-                onClick={handleDownloadPdf}
-                style={{ display: 'block', margin: '20px auto', padding: '10px 20px' }}
-            >
-                Download PDF
-            </button>
         </div>
     );
 };
