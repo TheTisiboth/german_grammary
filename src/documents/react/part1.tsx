@@ -11,7 +11,7 @@ const GermanCases = () => {
         backgroundColor: "#3498db",
         color: "white",
         padding: "8px",
-        textAlign: "left"
+        textAlign: "left" as const
     };
 
     const tableCellStyle = {
@@ -23,13 +23,12 @@ const GermanCases = () => {
         marginBottom: "30px"
     };
 
-    const renderHTML = (html) => ({__html: html});
+    const renderHTML = (html: string) => ({__html: html});
 
     return (
         <div style={{
             fontFamily: "Arial, sans-serif",
-            maxWidth: "900px",
-            margin: "0 auto",
+            width: "100%",
             backgroundColor: "#ffffff"
         }}>
             {/* Basic Functions */}

@@ -14,8 +14,7 @@ const Part2 = () => {
     return (
         <div style={{
             fontFamily: "Arial, sans-serif",
-            maxWidth: "900px",
-            margin: "0 auto",
+            width: "100%",
             backgroundColor: "#ffffff"
         }}>
             {/* Prepositions Section */}

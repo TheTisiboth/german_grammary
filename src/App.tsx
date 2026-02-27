@@ -35,21 +35,23 @@ const App: FC = () => {
     };
 
     return (
-        <div>
-             <button
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: '#f5f5f5', minHeight: '100vh' }}>
+            <button
                 onClick={handleDownloadPdf}
-                style={{ display: 'block', margin: '20px auto', padding: '10px 20px' }}
+                style={{ margin: '20px', padding: '10px 20px' }}
             >
                 Download PDF
             </button>
-            <div ref={part1Ref}>
-                <Part1 />
-            </div>
-            <div ref={part2Ref}>
-                <Part2 />
-            </div>
-            <div ref={part3Ref}>
-                <Part3 />
+            <div style={{ width: '950px', backgroundColor: '#ffffff' }}>
+                <div ref={part1Ref} style={{ padding: '1px 20px 20px 20px' }}>
+                    <Part1 />
+                </div>
+                <div ref={part2Ref} style={{ padding: '1px 20px 20px 20px' }}>
+                    <Part2 />
+                </div>
+                <div ref={part3Ref} style={{ padding: '1px 20px 20px 20px' }}>
+                    <Part3 />
+                </div>
             </div>
         </div>
     );

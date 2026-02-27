@@ -1,3 +1,4 @@
+import {ReactNode} from "react";
 
 const Part3 = () => {
   const caseColors = {
@@ -7,15 +8,14 @@ const Part3 = () => {
     genitiv: { color: "#9b59b6", backgroundColor: "#f4ecf7" }
   };
 
-  const ColoredText = ({ color, children }) => (
+  const ColoredText = ({ color, children }: { color: string; children: ReactNode }) => (
     <span style={{ color }}>{children}</span>
   );
 
   return (
     <div style={{
       fontFamily: "Arial, sans-serif",
-      maxWidth: "900px",
-      margin: "0 auto",
+      width: "100%",
       backgroundColor: "#ffffff"
     }}>
       {/* Complex Examples */}
